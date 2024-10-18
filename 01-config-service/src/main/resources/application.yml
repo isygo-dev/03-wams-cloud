@@ -1,0 +1,25 @@
+server:
+  tomcat:
+    max-swallow-size: -1
+    max-http-form-post-size: -1
+  port: @config.server.port@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 30MB
+      max-request-size: 30MB
+  cloud:
+  #    config:
+  #      server:
+  #        git:
+  #          uri: https://github.com/${GIT_USER}/${GIT_REPO}.git
+  #          username: ${GIT_USER}
+  #          password: pasteyouraccesstoken
+  #          clone-on-start: true
+  #          default-label: ${GIT_BRANCH}
+  #          searchPaths: ${FOLDER_PATH}
+  hazelcast:
+    config: classpath:cache/hazelcast.xml
+  profiles:
+    active: native
