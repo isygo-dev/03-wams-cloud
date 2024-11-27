@@ -4,12 +4,12 @@
 
     <organization>
         <name>isygo-it-services</name>
-        <url>http://www.isygo-it.eu</url>
+        <url>https://isygo-it.eu</url>
     </organization>
 
     <groupId>eu.isygo-it.services</groupId>
     <artifactId>config-service</artifactId>
-    <version>1.0.241017-S0215</version>
+    <version>cloud-1.0.271124-S0916</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -46,6 +46,14 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
+                <excludes>
+                    <exclude>config/**/*.*</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources/config</directory>
+                <filtering>true</filtering>
+                <targetPath>../config</targetPath>
             </resource>
         </resources>
 
@@ -55,7 +63,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <mainClass>eu.isygo-it.ConfigStarter</mainClass>
+                    <mainClass>eu.isygoit.ConfigStarter</mainClass>
                     <executable>true</executable>
                     <workingDirectory>target</workingDirectory>
                 </configuration>
@@ -93,6 +101,9 @@
         <!-- hibernate ddl-auto mode-->
         <profile>
             <id>ddl-update</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <env.db.ddl.auto>update</env.db.ddl.auto>
                 <env.db.show.sql>true</env.db.show.sql>
@@ -100,9 +111,6 @@
         </profile>
         <profile>
             <id>ddl-validate</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <env.db.ddl.auto>validate</env.db.ddl.auto>
                 <env.db.show.sql>true</env.db.show.sql>

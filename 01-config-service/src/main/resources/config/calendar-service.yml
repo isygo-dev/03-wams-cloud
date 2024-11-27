@@ -67,8 +67,6 @@ spring:
     topics:
       register-api-permission: @register-api-permission.topic@
       register-account: @register-account.topic@
-      rpm-asso-account: @rpm.asso-account.topic@
-      hrm-asso-account: @hrm.asso-account.topic@
       send-email: @send-email.topic@
     producer:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -144,3 +142,23 @@ app:
     signatureAlgorithm: HS256
     life-time-ms: 14400000
     storage-type: LOCAL
+  password:
+    pattern: '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[/@#$%^&+-=(){}\[\]])(?=\S+$).{8,}$'
+    grammar:
+      ftl: pattern_grammar.ftl
+
+jasypt:
+  encryptor:
+    algorithm: 'PBEWithMD5AndDES'
+    password: 'sEcReTkEy'
+    password.algorithm: 'SHA-512' #DIGEST ALGORITHMS=[MD2, MD5, SHA, SHA-256, SHA-384, SHA-512]
+    pool:
+      size: 1
+    salt: 32
+    salt.generator.class: org.jasypt.salt.RandomSaltGenerator
+  generator:
+    key:
+      size: 8
+  password:
+    default: 'root'
+    pattern: '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[/@#$%^&+-=(){}\[\]])(?=\S+$).{8,}$'

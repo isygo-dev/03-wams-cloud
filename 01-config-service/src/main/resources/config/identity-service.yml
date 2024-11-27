@@ -67,8 +67,6 @@ spring:
     topics:
       register-api-permission: @register-api-permission.topic@
       register-account: @register-account.topic@
-      rpm-asso-account: @rpm.asso-account.topic@
-      hrm-asso-account: @hrm.asso-account.topic@
       send-email: @send-email.topic@
     producer:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer

@@ -4,12 +4,12 @@
 
     <organization>
         <name>isygo-it-services</name>
-        <url>http://www.isygo-it.eu</url>
+        <url>https://isygo-it.eu</url>
     </organization>
 
     <groupId>eu.isygo-it.services</groupId>
     <artifactId>gateway-service</artifactId>
-    <version>1.0.241017-S0215</version>
+    <version>cloud-1.0.271124-S0916</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -120,7 +120,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <mainClass>eu.isygo-it.GatewayStarter</mainClass>
+                    <mainClass>eu.isygoit.GatewayStarter</mainClass>
                     <executable>true</executable>
                     <workingDirectory>target</workingDirectory>
                 </configuration>
