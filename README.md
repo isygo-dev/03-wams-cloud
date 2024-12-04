@@ -9,7 +9,7 @@
  Java            | 17         
  Spring Boot     | 3.2.1      
  Spring security | 6.1.1      
- Postgred SQL    | 17         
+ Postgres SQL    | 17         
  Hibernate       | 6.2.2      
  Maven           | 3          
 
@@ -20,7 +20,7 @@
 - Install Git last version from https://git-scm.com/downloads/win
 - Install Intellij IDEA last version (Ultimate or Community) from https://www.jetbrains.com/idea/download/other.html
 - Install Java 17 from https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
-- install Docker desktop last version from https://www.docker.com/products/docker-desktop
+- Install Docker desktop last version from https://www.docker.com/products/docker-desktop
 
 ## Backend
 
