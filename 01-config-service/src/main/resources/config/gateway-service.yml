@@ -120,6 +120,12 @@ spring:
             - Path=/lms/**
           filters:
             - RewritePath=/lms/(?<path>.*), /$\{path}
+        - id: smekit-management-service
+          uri: lb://smekit-service
+          predicates:
+            - Path=/smekit/**
+          filters:
+            - RewritePath=/smekit/(?<path>.*), /$\{path}
         - id: openapi
           uri: http://localhost:${server.port}
           predicates:
@@ -154,6 +160,8 @@ springdoc:
         url: /v3/api-docs/pms
       - name: lms
         url: /v3/api-docs/lms
+      - name: smekit
+        url: /v3/api-docs/smekit
 
 management:
   tracing:
