@@ -16,7 +16,7 @@ FROM eclipse-temurin:17-jdk-alpine
 RUN apk add --no-cache curl
 
 # Set working directory
-#WORKDIR /app
+WORKDIR /app
 
 # Copy built JAR and config directory from the builder stage
 COPY --from=builder /build/target/*.jar service.jar
