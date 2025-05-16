@@ -9,7 +9,7 @@
 
     <groupId>eu.isygo-it.services</groupId>
     <artifactId>cloud-ms</artifactId>
-    <version>cloud-1.0.271124-S0916</version>
+    <version>cloud-1.0.250516-T0922</version>
 
     <packaging>pom</packaging>
 
