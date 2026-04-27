@@ -36,8 +36,6 @@ spring:
       max-request-size: 30MB
   hazelcast:
     config: classpath:cache/hazelcast.xml
-  profiles:
-    active: development
   output:
     ansi:
       enabled: always

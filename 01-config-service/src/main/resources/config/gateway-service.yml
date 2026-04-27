@@ -28,8 +28,6 @@ logging:
 spring:
   hazelcast:
     config: classpath:cache/hazelcast.xml
-  profiles:
-    active: development
   output:
     ansi:
       enabled: always

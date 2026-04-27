@@ -14,12 +14,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.1</version>
+        <version>3.5.13</version>
         <relativePath/>
     </parent>
 
     <properties>
-        <spring-cloud.version>2022.0.3</spring-cloud.version>
+        <spring-cloud.version>2025.0.2</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -96,7 +96,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.2.1</version>
+                <version>3.5.13</version>
                 <configuration>
                     <mainClass>eu.isygoit.DiscoveryStarter</mainClass>
                     <executable>true</executable>

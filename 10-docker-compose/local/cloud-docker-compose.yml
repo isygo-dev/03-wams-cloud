@@ -16,6 +16,8 @@ services:
       - /c/docker/volumes/cloud/config-data:/config:ro
     networks:
       - cloud-net
+    #environment:
+    #  - SPRING_PROFILES_ACTIVE=development
 
   discovery-service:
     container_name: discovery-service
@@ -35,6 +37,8 @@ services:
       - /c/docker/volumes/cloud/discovery-data:/discovery:ro
     networks:
       - cloud-net
+    #environment:
+    #  - SPRING_PROFILES_ACTIVE=development
 
   gateway-service:
     container_name: gateway-service
@@ -56,6 +60,8 @@ services:
       - /c/docker/volumes/cloud/gateway-data:/gateway:ro
     networks:
       - cloud-net
+    #environment:
+    #  - SPRING_PROFILES_ACTIVE=development
 
 volumes:
   config-data:
