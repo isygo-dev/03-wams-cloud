@@ -30,16 +30,24 @@
 - For localhost running : Set mvn profile (build-dev-localhost & ddl-update)
 - For Docker running : Set mvn profile (build-docker & ddl-update)
 - Open the cloud project with Intellij IDEA (open as maven project)
-- Run: `mvn clean install` in the terminal or use the Intellij Maven GUI (use dev-localhost and ddl-create profiles)
+- Run: `mvn clean install` in the terminal or use the Intellij Maven GUI (use dev-localhost or docker profiles)
 - For localhost running Run Config sever then the Discovery server
 - For Docker running use Docker images
 
 ### Docker image
 
 - Run Docker desktop
-- Run: docker build -f .\09-docker\cloud-config.Dockerfile -t cloud/config-serv .
-- Run: docker build -f .\09-docker\cloud-discovery.Dockerfile -t cloud/discovery-serv .
-- Run: docker build -f .\09-docker\cloud-gateway.Dockerfile -t cloud/gateway-serv .
+- Build images
+```bash
+docker build -f .\09-docker\cloud-config.Dockerfile -t cloud/config-serv .
+docker build -f .\09-docker\cloud-discovery.Dockerfile -t cloud/discovery-serv .
+docker build -f .\09-docker\cloud-gateway.Dockerfile -t cloud/gateway-serv .
+```
+- Copy config files under <YOUR-VOLUME>:\docker\volumes\cloud\config-data
+- Run docker compose
+```bash
+docker compose -f .\10-docker-compose\local\cloud-docker-compose.yml up
+```
 
 
 
