@@ -149,6 +149,7 @@ app:
   upload:
     directory: /uploads/mms
   i18n:
+    enabled: true
     location: classpath:i18n/messages
   jwt:
     secretKey: JwTsEcReTkEy

@@ -36,6 +36,11 @@ springdoc:
     operationsSorter=method:
 
 spring:
+  cloud:
+    openfeign:
+      okhttp:
+        enabled: true
+
   autoconfigure:
     exclude:
       - org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration
@@ -128,6 +133,7 @@ app:
   upload:
     directory: /uploads/lms
   i18n:
+    enabled: true
     location: classpath:i18n/messages
   jwt:
     secretKey: JwTsEcReTkEy

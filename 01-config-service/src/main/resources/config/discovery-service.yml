@@ -15,6 +15,11 @@ eureka:
       defaultZone: http://@eureka.instance.hostname@:@discovery.server.port@/eureka/
 
 spring:
+  cloud:
+    openfeign:
+      okhttp:
+        enabled: true
+
   autoconfigure:
     exclude:
       - org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration

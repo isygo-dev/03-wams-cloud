@@ -36,6 +36,11 @@ springdoc:
     operationsSorter=method:
 
 spring:
+  cloud:
+    openfeign:
+      okhttp:
+        enabled: true
+
   autoconfigure:
     exclude:
       - org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration
@@ -131,6 +136,7 @@ app:
     local-storage: @app.dms.local-storage@
     no-duplicate: @app.dms.no-duplicate@
   i18n:
+    enabled: true
     location: classpath:i18n/messages
   jwt:
     secretKey: JwTsEcReTkEy
